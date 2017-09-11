@@ -1,0 +1,76 @@
+﻿@*@model IEnumerable<Capa_Datos.Orm.cls_Categorias>*@
+
+@{
+
+}
+
+
+<div class="info1">
+
+</div>
+
+
+<table class="table" id="grid" style="display:none;">
+    <thead>
+        <tr>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.IdEmpleado)
+                </th>*@
+            <th>
+                @*@Html.DisplayNameFor(model => model.CatNombreValue)*@
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Status)*@
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Departament)*@
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Turno)*@
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Salario)*@
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.DiaLibre)*@
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @*@foreach (var item in Model)
+            {*@
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.IdEmpleado)
+                </td>*@
+            <td>
+                @*@Html.DisplayFor(modelItem => item.CatNombreValue)*@
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.Status)*@
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.Departament)*@
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.Turno)*@
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.Salario)*@
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.DiaLibre)*@
+            </td>
+            <td>
+                @*@Html.ActionLink("Editar", "Editar", new { IdEmpleados = item.IdEmpleado }, new { @class = "btn alert alert-warning" })*@
+                @*|
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+            </td>
+        </tr>
+        @*}*@
+    </tbody>
+
+</table>
+
