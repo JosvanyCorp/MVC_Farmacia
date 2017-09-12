@@ -14,5 +14,10 @@ namespace BLL
         {
             return Cls_Categorias.Listar();
         }
+        public static Categorias_Entity Listar(Guid idCat)
+        {
+            return Cls_Categorias.Listar(idCat);
+        }
+
     }
 }

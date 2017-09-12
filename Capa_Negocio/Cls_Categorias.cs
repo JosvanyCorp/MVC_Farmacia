@@ -27,7 +27,7 @@ namespace Capa_Datos.Orm
 
                 throw;
             }
-            
+
             return flag;
         }
 
@@ -58,12 +58,11 @@ namespace Capa_Datos.Orm
         }
 
 
-        public List<Categorias_Entity> Listar(Guid idCat)
-
+        public static Categorias_Entity Listar(Guid idCat)
         {
-            var objCat = new List<Categorias_Entity>();
-            Conexion.IniciarSesion(".", "DB_Farmacia", "sa", "josvany");
+            var objCat = new Categorias_Entity();
 
+            Conexion.IniciarSesion(".", "DB_Farmacia", "sa", "josvany");
             try
             {
                 //var dt = Conexion.GDatos.TraerDataTable("",idCat);
@@ -71,26 +70,22 @@ namespace Capa_Datos.Orm
                 var row = (from Cat in dt.AsEnumerable()
                            where Cat.Field<Guid>("CAT_INT_ID") == idCat
                            select Cat).ToList();
-
                 if (row.Count > 0)
                 {
-                    objCat.Add(new Categorias_Entity
-                    {
-                        CatIntIdValue = (Guid)row[0].ItemArray[0],
-                        CatNombreValue = row[0].ItemArray[1].ToString(),
-                        CatCodigoValue = row[0].ItemArray[2].ToString(),
-                        CatStatusValue = (bool)row[0].ItemArray[3]
-                    });
+
+                    objCat.CatIntIdValue = (Guid)row[0].ItemArray[0];
+                    objCat.CatNombreValue = row[0].ItemArray[1].ToString();
+                    objCat.CatCodigoValue = row[0].ItemArray[2].ToString();
+                    objCat.CatStatusValue = (bool)row[0].ItemArray[3];
+
                 }
-
-
             }
             catch (Exception)
             {
 
                 throw;
             }
-
+            Conexion.FinalizarSesion();
             return objCat;
         }
 

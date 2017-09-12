@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Entity.Categorias_Entity>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+    @Html.ActionLink("Nuevo", "Create")
+</p>
+
+<div class="info1">
+    <table class="table" id="grid">
+        <thead>
+            <tr>
+                @*<th>
+                    @Html.DisplayNameFor(model => model.CatIntIdValue)
+                        </th>*@
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Código
+                </th>
+                <th>
+                    Estado
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.CatIntIdValue)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CatNombreValue)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CatCodigoValue)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CatStatusValue)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Crud", new { idCat = item.CatIntIdValue }, new { @class = "btn alert alert-warning" })
+                        @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
