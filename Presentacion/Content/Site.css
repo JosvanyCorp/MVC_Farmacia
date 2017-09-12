@@ -1,96 +1,24 @@
-﻿html {
-  font-size: 15px; }
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
 
-body {
-  font-family: 'Open Sans', sans-serif; }
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
-header {
-  padding-top: 10px; }
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
 
-#navbar3 ul li a:hover {
-  color: blue; }
-
-.dropdown-menu li a .second:hover {
-  color: blue; }
-
-.navbar-nav {
-  background: black; }
-
-.logo img {
-  width: 90px;
-  height: auto; }
-
-.navbar-brand > img {
-  padding: 0px 15px; }
-
-/* EXAMPLE 3
-
-line height is 20px by default so add 30px top and bottom to equal the new .navbar-brand 80px height  */
-.navbar-brand {
-  height: 80px; }
-
-.nav > li > a {
-  padding-top: 30px;
-  padding-bottom: 30px; }
-
-.navbar-toggle {
-  padding: 10px;
-  margin: 25px 15px 25px 0; }
-
-.info1 {
-  background: url("../images/imgfondo1.jpg") no-repeat center top;
-  color: #fff;
-  background-size: cover;
-  background-attachment: fixed !important;
-  height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-radius: 20px;
-  opacity: 0.5;
-  filter: alpha(opacity=50)
-  /* For IE8 and earlier */ }
-
-.dropdown-menu:hover {
-  color: blue; }
-
-.piedepagina {
-  width: 100%;
-  background: #111111;
-  color: #fff;
-  text-align: center; }
-
-.piedepagina .redes-sociales {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-
-.piedepagina .redes-sociales a {
-  color: #fff;
-  font-size: 2rem;
-  margin: 0 .5rem;
-  opacity: .7;
-  -webkit-transition: all .5s ease;
-          transition: all .5s ease; }
-
-.piedepagina .redes-sociales a:hover {
-  opacity: 1; }
-
-#grid {
-  color: black; }
-
-/*# sourceMappingURL=Site.css.map */
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}

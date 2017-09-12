@@ -14,15 +14,27 @@ namespace Capa_Datos.Orm
     public class Cls_Categorias
     {
         #region "Metodos"
-        public void Create(Categorias_Entity objCat)
+        public bool Create(Categorias_Entity objCat)
         {
-            Conexion.GDatos.Ejecutar("SP_IM_Categoria", objCat.CatIntIdValue, objCat.CatNombreValue, objCat.CatCodigoValue, objCat.CatStatusValue);
+            bool flag = false;
+
+            try
+            {
+                Conexion.GDatos.Ejecutar("SP_IM_Categoria", objCat.CatIntIdValue, objCat.CatNombreValue, objCat.CatCodigoValue, objCat.CatStatusValue);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
+            return flag;
         }
 
 
         public static List<Categorias_Entity> Listar()
         {
-            Conexion.IniciarSesion(@"TXNICARAGUA\SQLEXPRESS", "DB_Farmacia", "sa", "josvany");
+            Conexion.IniciarSesion(".", "DB_Farmacia", "sa", "josvany");
 
             var objCat = new List<Categorias_Entity>();
 
@@ -50,7 +62,7 @@ namespace Capa_Datos.Orm
 
         {
             var objCat = new List<Categorias_Entity>();
-            Conexion.IniciarSesion(@"TXNICARAGUA\SQLEXPRESS", "DB_Farmacia", "sa", "josvany");
+            Conexion.IniciarSesion(".", "DB_Farmacia", "sa", "josvany");
 
             try
             {
