@@ -3,7 +3,7 @@
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE PROCEDURE SP_IM_USER_INFO (
+CREATE PROCEDURE [dbo].[SP_IM_USER_INFO] (
     @USE_INF_INT_ID UNIQUEIDENTIFIER = NULL,
 	@CAT_TYP_USER   UNIQUEIDENTIFIER,
     @USE_INF_PRIMER_N   VARCHAR(100),

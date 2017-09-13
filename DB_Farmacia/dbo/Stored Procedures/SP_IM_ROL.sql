@@ -3,9 +3,10 @@
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE PROCEDURE SP_IM_ROL (
-    @RolName  VARCHAR(50),
-	@RolIntdId   UNIQUEIDENTIFIER = NULL
+CREATE PROCEDURE [dbo].[SP_IM_ROL] (
+   @RolIntdId   UNIQUEIDENTIFIER = NULL,
+    @RolName  VARCHAR(50)
+	
 )
 AS
 BEGIN

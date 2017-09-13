@@ -4,10 +4,11 @@
 -- Description:	<Description,,>
 -- =============================================
 CREATE PROCEDURE [dbo].[SP_IM_CATEGORIA] (
+    @CatIntdId   UNIQUEIDENTIFIER = NULL,
     @CatNombre   VARCHAR(50),
     @CatSysName  VARCHAR(50),
-    @CatStatus  BIT,
-	@CatIntdId   UNIQUEIDENTIFIER = NULL
+    @CatStatus  BIT
+	
 )
 AS
 BEGIN

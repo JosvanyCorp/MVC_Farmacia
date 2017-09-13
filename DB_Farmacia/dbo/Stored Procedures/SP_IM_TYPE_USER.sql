@@ -3,9 +3,9 @@
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE PROCEDURE SP_IM_TYPE_USER (
-    @Cat_typ_Name   VARCHAR(50),
-	@CatTypUser   UNIQUEIDENTIFIER = NULL
+CREATE PROCEDURE [dbo].[SP_IM_TYPE_USER] (
+    @CatTypUser   UNIQUEIDENTIFIER = NULL,
+    @Cat_typ_Name   VARCHAR(50)
 )
 AS
 BEGIN

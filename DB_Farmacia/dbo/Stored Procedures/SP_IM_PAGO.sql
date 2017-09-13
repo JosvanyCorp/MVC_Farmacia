@@ -3,9 +3,9 @@
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE PROCEDURE [SP_IM_PAGO] (
-    @PagNombre VARCHAR(50),
-	@PagIntId   UNIQUEIDENTIFIER = NULL
+CREATE PROCEDURE [dbo].[SP_IM_PAGO] (
+    @PagIntId   UNIQUEIDENTIFIER = NULL,
+    @PagNombre VARCHAR(50)
 )
 AS
 BEGIN
